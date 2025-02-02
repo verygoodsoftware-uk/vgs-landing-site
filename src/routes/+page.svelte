@@ -54,45 +54,66 @@
       font-weight: bold;
     }
   
-    .main-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        height: 100vh;
-    }
+    .main-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  height: 100vh;
+  width: 100vw;
+}
 
-    .section {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.top-sections {
+  display: flex;
+  flex: 1; /* Takes up available space */
+}
 
-  
-    /* Keyframes to fade text in and out */
-    @keyframes fade {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+.section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+/** lol ikr */
+.left {
+  justify-content: right;
+  font-size: x-large;
+}
+
+.right {
+  justify-content: left;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.subheading {
+  flex: 0 0 300px; /* Set a fixed height for the bottom section */
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   </style>
   
   <nav>
     <a href="#">Client Login</a>
   </nav>
   
-  <main>
-    <div class="main-content" id="fullpage">
-        <div class="section">
-            <span>Let us make you some software that</span>
+<main class="main-container">
+    <div class="top-sections">
+        <div class="section left">
+            <span>Let us make you a piece of software that</span>
         </div>
-        <div class="section">
+        <div class="section right">
             <span id='typed'></span>
         </div>
     </div>
-  </main>
+    <div class="subheading">
+        <div>You'd be surprised what you can optimise with a custom software solution.</div>
+        <div>Cloud or self hosted. Made with ❤️ in Cornwall</div>
+    </div>
+</main>
+
   
